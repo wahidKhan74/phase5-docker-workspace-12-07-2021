@@ -1,0 +1,34 @@
+# 1. verify docker images
+> sudo docker images 
+
+# 2. first initialize a docker swarm cluster
+> sudo docker swarm init
+
+# To add node to docker manager
+> docker swarm join --token SWMTKN-1-4vpu37yd50n5fyulab7ldh1mmqjpxxi2meg86chc4uxjosnerm-9tq7bk7a8rcosnadowb4lx4bd 172.31.88.78:2377
+
+# 3.  verify created cluster
+> sudo docker node ls
+
+# To add docker mananger node to other magnager   
+> sudo docker swarm join-token manager
+
+# 4. deploy docker swarm mananger based container.
+> sudo docker service create -p 80:80 --name php-service wahid74/phpcode
+
+# 5. list service
+> sudo docker service ls
+
+# list container
+> sudo docker ps -a
+
+--------------------------------------------------------------------------------------------
+# Desploying ecom-wbservice in docker swarm cluster
+---------------------------------------------------------------------------------------------
+ > sudo docker service create -p 80:80 --name ecom-service wahid74/ecom-webservice
+
+ # list service
+> sudo docker service ls
+
+# list container
+> sudo docker ps -a

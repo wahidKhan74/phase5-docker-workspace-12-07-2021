@@ -1,0 +1,23 @@
+# scalling up docker container with swarm
+
+# increase the service replica  -> scale up
+> sudo docker service scale php-service=4
+> sudo docker service scale ecom-service=4
+
+# list service 
+-> sudo docker service ls
+
+# list container 
+-> sudo docker ps -a
+
+------------------------------------------------
+# decrease the service replica  -> scale down
+
+> sudo docker service scale php-service=2
+> sudo docker service scale ecom-service=1
+
+# list service 
+-> sudo docker service ls
+
+# list container 
+-> sudo docker ps -a

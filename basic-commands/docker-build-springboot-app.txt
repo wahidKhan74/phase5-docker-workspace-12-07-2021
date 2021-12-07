@@ -1,0 +1,17 @@
+step 1: Project Build ( pacakage your project > build  jar)
+        > sudo apt install default-jdk -y
+        > sudo apt install maven -y
+        > cd project 
+        > mvn clean package -DSkipTests
+
+step 1: create a docker file
+      > Dockerfile
+step 2: docker build image
+      > sudo docker build -t ecom-webservice -f Dockerfile or Filepath
+      > sudo docker build -t ecom-webservice .
+
+step 3: verify build images
+> sudo docker images
+
+step 4: start/ run container from custom docker imag
+> sudo docker run --name ecomserver -p 8081:8081 -d ecom-webservice
