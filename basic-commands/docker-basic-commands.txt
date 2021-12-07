@@ -1,0 +1,24 @@
+# list docker container
+> sudo docker ps -a
+> sudo docker container ls
+
+# list docker images
+> sudo docker images
+
+# list docker volume
+> sudo docker volume ls
+
+# pull docker image from docker hub
+> sudo docker pull <image-name>
+> sudo docker pull ubuntu
+> sudo docker pull mysql
+> sudo docker pull openjdk
+> sudo docker pull alpine
+
+# create / run a container
+> sudo docker run -it ubuntu /bin/bash   // create container and login within container.
+
+> sudo docker run --name webserver -it ubuntu /bin/bash   // create container and login within container.
+
+# ssh / login a container
+> sudo docker exec -it <container-name> /bin/bash
